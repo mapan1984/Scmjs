@@ -1,3 +1,6 @@
+import {interp} from './core/interp.js'
+
+
 let programText = document.querySelector('.program>textarea')
 let output = document.querySelector('.output>div')
 

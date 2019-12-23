@@ -1,6 +1,6 @@
-let empty = /\s+/
-let reLeft = /\(/g
-let reRight = /\)/g
+const empty = /\s+/
+const reLeft = /\(/g
+const reRight = /\)/g
 
 /**
  * Convert a string of characters into a list of tokens
@@ -34,7 +34,7 @@ function parser_(tokens) {
     if (token == '(') {
         let ast = []
         while (tokens[0] != ')') {
-            ast.push(parser(tokens))
+            ast.push(parser_(tokens))
         }
         tokens.shift()  // pop off ')'
         return ast
@@ -81,3 +81,6 @@ function atom(token) {
         return result
     }
 }
+
+
+export { scanner, parser }

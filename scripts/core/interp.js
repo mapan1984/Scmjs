@@ -1,3 +1,7 @@
+import { scanner, parser } from './parse.js'
+import evaluate from './eval.js'
+import Env from './env.js'
+
 let env = new Env([
     ['+', (x, y) => x+y],
     ['-', (x, y) => x-y],
@@ -15,9 +19,12 @@ function interp(str) {
     let asts = parser(tokens)
     let results = []
     for (let ast of asts) {
-        // console.log(ast)
-        results.push(evaluate(ast, env))
-        // console.log(result)
+        console.log(ast)
+        let result = evaluate(ast, env)
+        results.push(result)
+        console.log(result)
     }
     return results
 }
+
+export { interp }

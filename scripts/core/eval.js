@@ -34,7 +34,8 @@ function isCall(exp) {
 }
 function isOp(exp) {
     let [op, e1, e2] = exp
-    return op == '+' || op == '-' || op == '*' || op == '/' || op == 'eq'
+    let ops = new Set(['+', '-', '*', '/', 'eq'])
+    return ops.has(op)
 }
 
 /**
@@ -82,3 +83,5 @@ function evaluate(exp, env) {
         throw 'Error syntax'
     }
 }
+
+export default evaluate

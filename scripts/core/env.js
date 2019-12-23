@@ -43,3 +43,5 @@ class Env extends Map {
         return newEnv
     }
 }
+
+export default Env

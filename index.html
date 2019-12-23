@@ -45,15 +45,10 @@
           <li><a href="#" data-program="(define x 1) (+ 1 x)">define</a></li>
           <li><a href="#" data-program="(define x 1) ((lambda (y) (+ x y)) 3)">lambda</a></li>
           <li><a href="#" data-program="(define fact (lambda (x) (if (eq x 1) 1 (* x (fact (- x 1)))))) (fact 4)">阶乘(fact 4)</a></li>
-          <li><a href="#" data-program="(define fact (lambda (x) (if (eq x 1) 1 (* x (fact (- x 1)))))) (fact 4)">阶乘(fact 4)</a></li>
         </ul>
       </div>
     </div>
 
-    <script type="text/javascript" src="./scripts/env.js"></script>
-    <script type="text/javascript" src="./scripts/parse.js"></script>
-    <script type="text/javascript" src="./scripts/eval.js"></script>
-    <script type="text/javascript" src="./scripts/interp.js"></script>
-    <script type="text/javascript" src="./scripts/app.js"></script>
+    <script  type="module" src="./scripts/app.js"></script>
   </body>
 </html>
